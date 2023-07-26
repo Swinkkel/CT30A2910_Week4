@@ -125,7 +125,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var searchShow = document.getElementById("input_show");
 var submitBtn = document.getElementById("submit_data");
 submitBtn.addEventListener("click", getShows);
-function showTemplate() {
+function addShow(title, summary, img_medium) {
+  var div1 = document.createElement("div");
+  div1.className = "show-data";
+  var img = document.createElement("img");
+  img.src = img_medium;
+  var div2 = document.createElement("div");
+  div2.className = "show-info";
+  var h1_element = document.createElement("h1");
+  var p_element = document.createElement("p");
+  div2.appendChild(h1_element);
+  div2.appendChild(p_element);
+  div1.appendChild(img);
+  div1.appendChild(div2);
+  document.getElementById("body").appendChild(div1);
+
   /*
     <div class="show-data">
     <img src="[show image medium]"> 
@@ -192,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38965" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46859" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
