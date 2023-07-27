@@ -29,7 +29,7 @@ body {
     display: flex;
   }
 
-  .show.info {
+  .show-info {
     padding: 10px;
   }
 }
