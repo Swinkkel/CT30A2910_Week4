@@ -1,6 +1,6 @@
-const searchShow = document.getElementById("input_show");
+const searchShow = document.getElementById("input-show");
 
-const submitBtn = document.getElementById("submit_data");
+const submitBtn = document.getElementById("submit-data");
 submitBtn.addEventListener("click", getShows);
 
 async function getShows() {
